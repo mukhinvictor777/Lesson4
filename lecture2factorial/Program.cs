@@ -1,13 +1,9 @@
-﻿void FillImage(int row, int col)
+﻿double Factorial (int n)
 {
-    if (pic[row, col] == 0)
-    {
-        pic[row, col] = 1;
-        FillImage(row - 1, col);
-        FillImage(row, col - 1);
-        FillImage(row + 1, col);
-        FillImage(row, col + 1);
-    }
+    if (n == 1) return 1;
+    else return n * Factorial(n-1);
 }
-
-FillImage(6, 6);
+for (int i = 1; i <= 40; i++)
+{
+    Console.WriteLine($"{i}! = {Factorial(i)}");
+}
